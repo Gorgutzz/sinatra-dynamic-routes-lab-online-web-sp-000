@@ -28,7 +28,7 @@ class App < Sinatra::Base
     @word_string = "#{@word1} #{@word2} #{@word3} #{@word4} #{@word5}."
   end
 
-  get '/:operation/:number1/:number2' do 
+  get '/:operation/:number1/:number2' do
     case params[:operation]
     when "add"
       @result = params[:number1].to_i + params[:number2].to_i
@@ -38,9 +38,9 @@ class App < Sinatra::Base
       @result = params[:number1].to_i * params[:number2].to_i
     when "divide"
       @result = params[:number1].to_i / params[:number2].to_i
-    end 
+    end
     "#{@result}"
-  end 
+  end
 
 
 end
